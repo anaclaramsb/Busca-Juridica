@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    align-items:stretch;
+    height: 100vh;
+}
+
+.image{
+    width: 40%;
+    height: 100;
+    object-fit: cover;
+   object-fit: cover;
+}
+
+.content{
+    width: 60%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.title{
+     width: 70%;
+    text-align: center;
+    font-size: 46px;
+}
+
+.description{
+    width:70%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.span{
+    color: green
+}

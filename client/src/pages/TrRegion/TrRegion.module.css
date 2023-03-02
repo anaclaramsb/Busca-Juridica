@@ -1,0 +1,17 @@
+.header{
+    background-color: #F1F1F1;
+    padding: 10px 0;
+}
+
+.content{
+    padding: 40px 30px;
+}
+
+h2, p{
+    margin: 10px 0;
+}
+
+.law_suit{
+  border-top: 1px solid #a8a8b3;
+    padding: 10px 0;
+}
