@@ -1,15 +1,14 @@
 import React from 'react';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import Header from '../../components/Header/Header';
+
 import styles from './TrRegion.module.css';
 
 const TrRegion = () => {
   return (
     <div>
-      <div className={styles.header}>
-        <SearchBar isHome={false} />
-      </div>
+       <Header />
       <div className={styles.content}>
-      <h1>TrRegion</h1>
+      <h1 className={styles.tr_region}>TrRegion</h1>
       <div className={styles.law_suit}>
         <h2>LawSuit</h2>
         <p>Data de início</p>

@@ -1,14 +1,11 @@
 import React from 'react';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import Header from '../../components/Header/Header';
 import styles from './LawSuit.module.css';
 
 const LawSuit = () => {
 return(
         <div>
-            <div className={styles.header}>
-                <SearchBar isHome={false} />
-
-            </div>
+            <Header />
             <h1>LawSuit</h1>
         </div>
     );
