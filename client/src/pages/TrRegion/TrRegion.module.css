@@ -1,17 +1,27 @@
-
-.tr_region{
-    margin-bottom: 30px;
+.tr_region {
+  margin-bottom: 30px;
 }
 
-.content{
-    padding: 40px 30px;
+.content {
+  padding: 40px 30px;
 }
 
-h2, p{
-    margin: 10px 0;
+h2,
+p {
+  margin: 0;
 }
 
-.law_suit{
+.law_suit {
   border-top: 1px solid #a8a8b3;
-    padding: 10px 0;
+  padding: 10px 0;
+}
+
+.link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
 }

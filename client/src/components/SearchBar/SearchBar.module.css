@@ -1,35 +1,43 @@
 .home_form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 32px;
+  width: 25vw;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
 }
 
 .header button {
-    margin-left: 30px;
+  margin-left: 30px;
+}
+
+.inputContainer {
+  position: relative;
+  width: 25vw;
 }
 
 .input {
-    height: 41px;
-    border-radius: 6px;
-    border: 1px solid gray;
-    min-width: 120px;
+  height: 41px;
+  border-radius: 6px;
+  border: 1px solid #8f8f8f;
+  width: 100%;
 }
 
 .select {
-    height: 45px;
-    border-radius: 6px;
-    border: 1px solid gray;
-    cursor: pointer;
-    min-width: 120px;
+  height: 45px;
+  border-radius: 6px;
+  border: 1px solid #8f8f8f;
+  cursor: pointer;
+  width: 25vw;
 }
 
 .separator {
@@ -55,12 +63,41 @@
   margin-left: 16px;
 }
 
-.button{
-    color: white;
-    background-color: green;
-    border: none;
-    border-radius: 6px;
-    height: 45px;
-    min-width: 120px;
-    cursor: pointer;
+.buttonContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  flex-direction: column;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #00920c;
+  border: none;
+  border-radius: 6px;
+  height: 45px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.error {
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  color: #ff0000;
+  font-size: 12px;
+}
+
+.error_header {
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  left: 30px;
+  color: red;
+  background-color: #ffffff;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 2px;
+  border: 1px solid black;
 }

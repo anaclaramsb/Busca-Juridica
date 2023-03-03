@@ -1,4 +1,10 @@
-.header{
-    background-color: #F1F1F1;
-    padding: 10px 0;
+.header {
+  background-color: #f1f1f1;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search_bar {
+   width: 80vw;
 }

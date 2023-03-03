@@ -3,20 +3,25 @@ import { lawSuitsData } from '../mock/lawsuits.js';
 export const getLawSuitByCnj = (request, response) => {
   const lawSuits = lawSuitsData;
 
-  const cnj = request.params.cnj;
+  const { cnj } = request.query;
 
+  if(!cnj){
+    response.send(lawSuits);
+  }
+  else{
   const findExist = lawSuits.find((lawSuit) => lawSuit.cnj === cnj);
   if (!findExist) {
     return response.status(404).send({ error: true, msg: 'lawsuit not exist' });
   } else {
     response.send(findExist);
   }
+}
 };
 
 export const getAllLawSuitByTr = (request, response) => {
   const lawSuits = lawSuitsData;
 
-  const tr = request.params.tr;
+  const { tr } = request.query;
 
   const findExist = lawSuits.filter((lawSuit) => lawSuit.trregion === tr);
   if (!findExist) {
@@ -38,7 +43,3 @@ export const getAllTr = (request, response) => {
     }
   };
 
-export const getAllLawSuit = (request, response) => {
-  const users = lawSuitsData;
-  response.send(users);
-};

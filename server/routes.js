@@ -1,6 +1,5 @@
 import express from 'express';
 import {
-    getAllLawSuit,
     getLawSuitByCnj,
     getAllLawSuitByTr,
     getAllTr,
@@ -8,9 +7,8 @@ import {
 
 const routes = express.Router();
 
-routes.get('/lawsuits', getAllLawSuit);
-routes.get('/lawsuits/:cnj', getLawSuitByCnj);
-routes.get('/trregion/:tr', getAllLawSuitByTr);
-routes.get('/trregion/', getAllTr);
+routes.get('/lawsuits', getLawSuitByCnj);
+routes.get('/trregion', getAllLawSuitByTr);
+routes.get('/trregions', getAllTr);
 
 export default routes;

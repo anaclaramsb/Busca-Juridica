@@ -1,0 +1,27 @@
+.content {
+  padding: 24px 48px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.image {
+  margin-top: 30px;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date {
+    color: #8f8f8f;
+    margin-top: 2px;
+    margin-bottom: 24px;
+}
+
+.law_suit_content {
+    display: flex;
+    gap: 5%;
+}
