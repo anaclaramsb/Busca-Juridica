@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import SearchBar from './SearchBar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { validateCnjCode } from './utils';

@@ -5,17 +5,18 @@ export const getLawSuitByCnj = (request, response) => {
 
   const { cnj } = request.query;
 
-  if(!cnj){
+  if (!cnj) {
     response.send(lawSuits);
-  }
-  else{
-  const findExist = lawSuits.find((lawSuit) => lawSuit.cnj === cnj);
-  if (!findExist) {
-    return response.status(404).send({ error: true, msg: 'lawsuit not exist' });
   } else {
-    response.send(findExist);
+    const findExist = lawSuits.find((lawSuit) => lawSuit.cnj === cnj);
+    if (!findExist) {
+      return response
+        .status(404)
+        .send({ error: true, msg: 'lawsuit not exist' });
+    } else {
+      response.send(findExist);
+    }
   }
-}
 };
 
 export const getAllLawSuitByTr = (request, response) => {
@@ -25,21 +26,26 @@ export const getAllLawSuitByTr = (request, response) => {
 
   const findExist = lawSuits.filter((lawSuit) => lawSuit.trregion === tr);
   if (!findExist) {
-    return response.status(404).send({ error: true, msg: 'list of lawsuit not exist' });
+    return response
+      .status(404)
+      .send({ error: true, msg: 'list of lawsuit not exist' });
   } else {
     response.send(findExist);
   }
 };
 
 export const getAllTr = (request, response) => {
-    const lawSuits = lawSuitsData;
-  
-    const TRs = [...lawSuits.reduce((acc, cur) => acc.add(cur.trregion), new Set())]; 
+  const lawSuits = lawSuitsData;
 
-    if (!TRs) {
-      return response.status(404).send({ error: true, msg: 'list of lawsuit not exist' });
-    } else {
-      response.send(TRs);
-    }
-  };
+  const TRs = [
+    ...lawSuits.reduce((acc, cur) => acc.add(cur.trregion), new Set()),
+  ];
 
+  if (!TRs) {
+    return response
+      .status(404)
+      .send({ error: true, msg: 'list of lawsuit not exist' });
+  } else {
+    response.send(TRs);
+  }
+};

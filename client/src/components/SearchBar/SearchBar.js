@@ -16,9 +16,12 @@ const SearchBar = ({ isHome }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    api.get('/trregions').then((response) => setTrRegions(response.data)).catch((err) => {
-      console.log(err)
-    });;
+    api
+      .get('/trregions')
+      .then((response) => setTrRegions(response.data))
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const handleTrChange = (event) => {
@@ -33,8 +36,8 @@ const SearchBar = ({ isHome }) => {
     setCode(event);
     setFormEmptyError(false);
     setInputIsBeeingUsed(!!event);
-    if(validateCnjCode(event)) setCnjIsInvalid(false);
-    else setCnjIsInvalid(!!event)
+    if (validateCnjCode(event)) setCnjIsInvalid(false);
+    else setCnjIsInvalid(!!event);
   };
 
   const cleanForm = () => {
@@ -70,7 +73,7 @@ const SearchBar = ({ isHome }) => {
           value={code}
           className={styles.input}
           disabled={selectIsBeeingUsed}
-          data-testid="input"
+          data-testid='input'
         />
         {cnjIsInvalid && (
           <div className={isHome ? styles.error : styles.error_header}>
@@ -85,14 +88,16 @@ const SearchBar = ({ isHome }) => {
         onChange={handleTrChange}
         className={styles.select}
         disabled={inputIsBeeingUsed}
-        data-testid="select"
+        data-testid='select'
       >
         <option value='default'>--Escolha um Tribunal Regional--</option>
         {trRegions?.map((region, index) => (
-          <option data-testid="tr-options" key={index} value={region}>{region}</option>
+          <option data-testid='tr-options' key={index} value={region}>
+            {region}
+          </option>
         ))}
       </select>
-       
+
       <div className={styles.buttonContainer}>
         <button className={styles.button} type='submit'>
           Buscar

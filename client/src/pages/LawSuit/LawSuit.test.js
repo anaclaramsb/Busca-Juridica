@@ -6,31 +6,33 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 jest.mock('../../api/api');
 
-
-
 describe('LawSuit component', () => {
   it('call api and renders LawSuit component', async () => {
     const lawSuit = {
-        id: 1,
-        cnj: '5006789-12.2021.2.14.5462',
-        author: 'Fulano',
-        defendent: 'Sicrano',
-        trregion: 'TJBA',
-        date: '2021-02-14T12:00:00Z',
+      id: 1,
+      cnj: '5006789-12.2021.2.14.5462',
+      author: 'Fulano',
+      defendent: 'Sicrano',
+      trregion: 'TJBA',
+      date: '2021-02-14T12:00:00Z',
       movements: [],
     };
 
     api.get.mockImplementation((url) => {
-        if (url === '/lawsuits') {
-            return Promise.resolve({ data: lawSuit });
-        } else {
-            return Promise.resolve({ data: ['TRSC', 'TRRJ'] });
-        }
+      if (url === '/lawsuits') {
+        return Promise.resolve({ data: lawSuit });
+      } else {
+        return Promise.resolve({ data: ['TRSC', 'TRRJ'] });
+      }
     });
 
-    render(<Router><LawSuit /></Router>);
+    render(
+      <Router>
+        <LawSuit />
+      </Router>
+    );
 
-    await screen.findByText('Processo n. 5006789-12.2021.2.14.5462'); 
+    await screen.findByText('Processo n. 5006789-12.2021.2.14.5462');
     expect(screen.getByText('Autor: Fulano')).toBeInTheDocument();
     expect(screen.getByText('Réu: Sicrano')).toBeInTheDocument();
     expect(screen.getByText('Região: TJBA')).toBeInTheDocument();

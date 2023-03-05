@@ -26,11 +26,11 @@ describe('TrRegion component', () => {
   beforeEach(() => {
     api.get.mockImplementation((url) => {
       if (url === '/trregion') {
-          return Promise.resolve({ data: lawSuits });
+        return Promise.resolve({ data: lawSuits });
       } else {
-          return Promise.resolve({ data: ['TRSC', 'TRRJ'] });
+        return Promise.resolve({ data: ['TRSC', 'TRRJ'] });
       }
-  });
+    });
   });
 
   afterEach(() => {
@@ -38,11 +38,19 @@ describe('TrRegion component', () => {
   });
 
   it('should render TrRegion component with law suits', async () => {
-    render(<Router><TrRegion /></Router>);
+    render(
+      <Router>
+        <TrRegion />
+      </Router>
+    );
     await screen.findByText('Processo n. 1234567-89.2021.1.01.0000');
-    expect(screen.getByText('Processo n. 1234567-89.2021.1.01.0000')).toBeInTheDocument();
+    expect(
+      screen.getByText('Processo n. 1234567-89.2021.1.01.0000')
+    ).toBeInTheDocument();
     expect(screen.getByText(formatDate('2022-02-28'))).toBeInTheDocument();
-    expect(screen.getByText('Processo n. 7654321-98.2021.2.02.0000')).toBeInTheDocument();
+    expect(
+      screen.getByText('Processo n. 7654321-98.2021.2.02.0000')
+    ).toBeInTheDocument();
     expect(screen.getByText(formatDate('2022-03-01'))).toBeInTheDocument();
   });
 });

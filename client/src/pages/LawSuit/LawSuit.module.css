@@ -16,12 +16,12 @@ p {
 }
 
 .date {
-    color: #8f8f8f;
-    margin-top: 2px;
-    margin-bottom: 24px;
+  color: #8f8f8f;
+  margin-top: 2px;
+  margin-bottom: 24px;
 }
 
 .law_suit_content {
-    display: flex;
-    gap: 5%;
+  display: flex;
+  gap: 5%;
 }
