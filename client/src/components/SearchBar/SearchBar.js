@@ -69,6 +69,7 @@ const SearchBar = ({ isHome }) => {
           value={code}
           className={styles.input}
           disabled={selectIsBeeingUsed}
+          data-testid="input"
         />
         {cnjIsInvalid && (
           <div className={isHome ? styles.error : styles.error_header}>
@@ -82,6 +83,7 @@ const SearchBar = ({ isHome }) => {
         onChange={handleTrChange}
         className={styles.select}
         disabled={inputIsBeeingUsed}
+        data-testid="select"
       >
         <option value='default'>--Escolha um Tribunal Regional--</option>
         {trRegions.map((region) => (
