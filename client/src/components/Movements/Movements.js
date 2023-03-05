@@ -7,7 +7,6 @@ const Movements = ({movements}) => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Movimentações</div>
-    {console.log(movements)}
       {!movements?.length || !movements ? (
         <div className={styles.movement}>
          <p> Não há movimentações para esse processo</p>
@@ -15,8 +14,8 @@ const Movements = ({movements}) => {
       ) : 
         <>{
             movements?.map(
-                (movement) => 
-                (<div className={styles.movement}>
+                (movement, index) => 
+                (<div className={styles.movement} key={index}>
                     <span className={styles.span}>{formatDate(movement.date)}</span>
                     <p>{movement.description}</p>
                      </div>

@@ -16,7 +16,9 @@ const SearchBar = ({ isHome }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    api.get('/trregions').then((response) => setTrRegions(response.data));
+    api.get('/trregions').then((response) => setTrRegions(response.data)).catch((err) => {
+      console.log(err)
+    });;
   }, []);
 
   const handleTrChange = (event) => {
@@ -30,7 +32,6 @@ const SearchBar = ({ isHome }) => {
   const handleCnjChange = (event) => {
     setCode(event);
     setFormEmptyError(false);
-    console.log(event);
     setInputIsBeeingUsed(!!event);
     if(validateCnjCode(event)) setCnjIsInvalid(false);
     else setCnjIsInvalid(!!event)
@@ -78,6 +79,7 @@ const SearchBar = ({ isHome }) => {
         )}
       </div>
       <div className={styles.separator}>ou</div>
+
       <select
         value={trRegion}
         onChange={handleTrChange}
@@ -86,10 +88,11 @@ const SearchBar = ({ isHome }) => {
         data-testid="select"
       >
         <option value='default'>--Escolha um Tribunal Regional--</option>
-        {trRegions.map((region) => (
-          <option value={region}>{region}</option>
+        {trRegions?.map((region, index) => (
+          <option data-testid="tr-options" key={index} value={region}>{region}</option>
         ))}
       </select>
+       
       <div className={styles.buttonContainer}>
         <button className={styles.button} type='submit'>
           Buscar

@@ -28,7 +28,4 @@ describe('e2e tests', () => {
       cy.get('[data-testid="select"]').should('be.disabled');
     });
   });
-  context('navigation', () => {
-
-  });
 });
