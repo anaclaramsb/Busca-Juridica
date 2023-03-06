@@ -1,7 +1,7 @@
 ## Decisões 
 
 ### 1. Front-end
-Decidi primeiro pensar na estrutura de projeto do Front-end. Para começar pensei em usar a estrutura de átomos, moléculas e organismos para a separação de componentes, mas como seria um projeto pequeno decidi manter o mais simples possível apenas com uma pasta para componentes.
+Decidi primeiro pensar na estrutura de projeto do Front-end. Para começar cogitei utilizar a estrutura de átomos, moléculas e organismos para a separação de componentes, mas como seria um projeto pequeno decidi manter o mais simples possível apenas com uma pasta para componentes.
 
 A segunda decisão foi de manter os arquivos de css utilizando css modules sempre dentro da mesma pasta do componente e da página, igualmente com seu arquivo de teste unitário caso fosse feito. 
 
@@ -20,12 +20,13 @@ Para começar, decidi fazer um tipo CRUD server side com rotas apenas de GET em 
 
 De início fiz toda a parte do controller e sua requisição em cima de um arquivo JSON com os dados presentes em `server\mock\lawsuits.js`. Minha ideia era futuramente utilizar o PostgreSQL para criar um banco de dados e substituir as chamadas JSON no controller por chamadas SQL dentro de um banco populado, mas não deu tempo de fazer esta parte e ficou como um *to-do* futuro.
 
-Na criação do formulário lá no fron-end, percebi que seria mais legal para a manutenção do código a criação de uma rota no back-end que me retornasse uma lista de todos os Tribuinais usados nos dados e assim fiz uma pequena função com reduce e Set() para esse retorno nos controllers.
+Na criação do formulário lá no front-end, percebi que seria mais legal para a manutenção do código a criação de uma rota no back-end que me retornasse uma lista de todos os Tribuinais usados nos dados para disponibilizar no select do formulário e assim fiz uma pequena função com reduce e Set() para esse retorno nos controllers.
 Uma segunda rota para o retorno de todos os projeto de uma determinada região tribunal e uma terceira rota de chamada de um processo específico também foram criadas.
 
 --------------------
 
 
-### 3. Testes
+### 3. Testes e outros
 
 - Precisei adicionar parâmetros no test script no package.json por conta de problemas com o axios e a própria biblioteca jest.
+- To-do: Automatizar os scripts para rodar o back-end e o front-end em apenas um comando
