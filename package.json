@@ -1,0 +1,11 @@
+{
+    "name": "busca-juridica",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "client": "cd client && npm install && npm start",
+      "server": "cd server && npm install && npm run serve",
+      "dev": "npm install -g concurrently && concurrently \"npm run server\" \"npm run client\""
+    }
+  }

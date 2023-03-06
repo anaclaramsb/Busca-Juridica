@@ -11,34 +11,20 @@ Testes: Jest (unit) e Cypress (e2e)
 
 ## 1. Getting Started
 
-Para começar, abra dois terminais na raiz do projeto. No primeiro rode em sequência:
+Para começar, rode:
 
-`cd ./server`
-
-`npm install`
-
-`npm run serve`
-
-
-No segundo rode em sequência:
-
-`cd ./client`
-
-`npm install`
-
-`npm start`
-
+`npm run dev`
 
 **O site estará rodando em `http://localhost:3000/`**
 
-Para rodar os testes unitários, por favor rode em um terceiro terminal:
+Para rodar os testes unitários do front-end, por favor rode em um segundo terminal:
 
 `cd ./client`
 
 `npm run test`
 
 
-Para rodar o testes e2e cypress, por favor rode neste mesmo terceiro terminal, dentro da pasta client e com o front-end e o back-end rodando simultaneamente:
+Para rodar o testes e2e cypress, por favor rode neste mesmo segundo terminal, dentro da pasta client e com o front-end e o back-end rodando simultaneamente:
 
 `npx cypress run`
    

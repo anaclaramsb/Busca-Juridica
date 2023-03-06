@@ -27,6 +27,8 @@ De início fiz toda a parte do controller e sua requisição em cima de um arqui
 Na criação do formulário lá no front-end, percebi que seria mais legal para a manutenção do código a criação de uma rota no back-end que me retornasse uma lista de todos os Tribuinais usados nos dados para disponibilizar no select do formulário e assim fiz uma pequena função com reduce para esse retorno nos controllers.
 Uma segunda rota para o retorno de todos os projeto de uma determinada região tribunal e uma terceira rota de chamada de um processo específico também foram criadas.
 
+Para  futuro, também gostaria de criar testes para o back-end.
+
 --------------------
 
 
@@ -35,5 +37,3 @@ Uma segunda rota para o retorno de todos os projeto de uma determinada região t
 Para os testes unitários, decidi criar um teste para cada componente e um teste para cada página, testando renderizações e movimentações do axios. Apenas para o Header não criei testes pois ele apenas renderiza o SearchBar.
 Nos testes e2e decidi usar o cypress e percorrer o formulário da home, checar seu fluxo e suas mensagens de erro.
 Pensei em utilizar o cypress também para os testes em componentes, mas como o jest também faria esse papel e não tive muito contato em utilizar o cypress para teste de componentes decidi manter a estrutura citada acima.
-Alguns pontos a adicionar:
-- To-do: Para o futuro, pensei em automatizar os scripts para rodar o back-end e o front-end em apenas um comando
