@@ -64,6 +64,7 @@ const SearchBar = ({ isHome }) => {
     <form
       onSubmit={(e) => handleSubmit(e)}
       className={isHome ? styles.home_form : styles.header}
+      data-testid="search-bar"
     >
       <div className={styles.inputContainer}>
         <input
