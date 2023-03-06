@@ -39,9 +39,9 @@ O projeto consiste em duas pastas, uma pro server side feita em Node.JS e Expres
  2. A página de Região Tribunal(TrRegion) onde consta todos os processos de uma determinada região
  3. A página de Processo(LawSuit) onde consta todos os detalhes de um processo específico
 
-Na home o usuário tem a opção de buscar por número de CNJ de um processo ou por uma região específica para achar todos os processos dessa região, ficando a outra opção bloqueada enquanto o usuário utiliza uma dessas opções. O usuário pode também refazer a operação de busca em qualquer outra página com a partir do Header da página.
+Na home o usuário tem a opção de buscar por número de CNJ de um processo ou por uma região específica para achar todos os processos dessa região, ficando a outra opção bloqueada enquanto o usuário utiliza uma dessas opções. O usuário pode também refazer a operação de busca em qualquer outra página a partir do Header da página.
 
-Testes unitários são realizados nos componentes `LawSuitDetails`, `Movements` e `SearchBar` de forma garantir o funcionamento ideal deles e também nas páginas `LawSuit` e `TrRegion`. O fluxo de erros e bloqueios do form é testado a partir do teste cypress e2d que se encontra no caminho `client\cypress\e2e\e2e.cy.js`
+Testes unitários são realizados nos componentes `LawSuitDetails`, `Movements` e `SearchBar` de forma garantir o funcionamento ideal deles e também em todas as páginas. O fluxo de erros e bloqueios do form é testado a partir do teste cypress e2e que se encontra no caminho `client\cypress\e2e\e2e.cy.js`
 
 ## 3. Decisões 
 
