@@ -52,5 +52,5 @@ Testes unitários são realizados nos componentes `LawSuitDetails`, `Movements` 
 ## 3. Decisões 
 
 Para o detalhamento das decisões por favor acesse o arquivo:
-
+[Comments.md](https://github.com/anaclaramsb/Busca-Juridica/blob/main/COMMENTS.md)
 
