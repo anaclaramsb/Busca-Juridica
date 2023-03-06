@@ -13,6 +13,8 @@ Testes: Jest (unit) e Cypress (e2e)
 
 Para começar, rode:
 
+`npm install`
+
 `npm run dev`
 
 **O site estará rodando em `http://localhost:3000/`**
