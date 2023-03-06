@@ -1,9 +1,11 @@
 # Desafio: Consulta Processual
 
-Olá! Bem vindo ao
+Olá! Bem vindo ao Busca Jurídica, siga as instruções abaixo para execução:
 
 Linguagem: JavaScript
+
 Frameworks: React.JS e Node.JS (+Express)
+
 Testes: Jest (unit) e Cypress (e2e)
 
 
@@ -13,12 +15,16 @@ Para começar, abra dois terminais na raiz do projeto. No primeiro rode em sequ�
 
 `cd ./server`
 
+`npm install`
+
 `npm run serve`
 
 
 No segundo rode em sequência:
 
 `cd ./client`
+
+`npm install`
 
 `npm start`
 
