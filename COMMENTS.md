@@ -15,6 +15,8 @@ Um erro também é apresentado caso o usuário tente buscar sem ter preenchido n
 
 Como processo futuro gostaria de melhorar a aparência dessas mensagens de erro quando o SearchBar está no Header, com uma mensagem mais agradável e talvez um toast note com um timeout.
 
+Consegui garantir uma mínima responsividade para tablets mas como *to-do* futuro no front-end gostaria também de implementar uma responsividade para celular e melhorar a do tablet.
+
 -----------------
 
 ### 2. Back-end
